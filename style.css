@@ -1,0 +1,19 @@
+@font-face {
+  font-family: RampartOne;
+  src: url("assets/fonts/RampartOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: Margarine;
+  src: url("assets/fonts/Margarine-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+.font-rampart {
+    font-family: 'RampartOne', sans-serif;
+  }
+
+.font-margarine {
+    font-family: 'Margarine', sans-serif;
+  }
