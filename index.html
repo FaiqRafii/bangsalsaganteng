@@ -5,6 +5,13 @@
     <title>Ayo Main</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/img/icon.webp" type="image/x-icon" />
+    <!-- <audio
+      autoplay
+      loop
+      id="bgm"
+      src="assets/music/Do The Bop - Everet Almond.mp3"
+    ></audio> -->
   </head>
 
   <body
@@ -16,171 +23,464 @@
       background-repeat: no-repeat;
     "
   >
-    <!-- Judul -->
+    <!-- Landing -->
     <div
-      class="w-full relative max-w-screen-sm mx-auto mt-10 items-center justify-center text-center"
+      id="landing"
+      class="z-50 overflow-hidden pt-10 w-full h-full justify-center items-center"
     >
-      <h1 class="font-rampart text-5xl">Aku Banget</h1>
-      <h1 class="font-margarine text-xl mt-4">
-        Cari sifat yang Bang Salsa banget
-      </h1>
+      <div
+        class="w-full max-w-screen-sm mx-auto text-center items-center justify-center"
+      >
+        <div class="text-6xl font-rampart">Haloo Bang Salsa</div>
+        <div class="mt-5 text-md font-margarine">
+          Karena hari ini adalah your special day... <br />Aku mau ngajak bang
+          Salsa mainn
+        </div>
+        <div id="mainBtn" 
+          class="border mx-auto mt-5 w-30 h-10 border-black bg-white text-black rounded-md flex items-center justify-center hover:bg-black hover:text-white"
+        >
+          <div class="font-margarine">Ayo Mainn</div>
+        </div>
+      </div>
       <img
-        src="assets/img/kacapm.webp"
-        class="size-20 absolute sm:-left-4 sm:top-6 -left-6 top-21 scale-x-[-1]"
+        src="assets/img/mahkota.webp"
         alt=""
-        srcset=""
+        class="max-w-15 absolute top-82 sm:top-67 naik-turun left-1/2"
       />
       <img
-        src="assets/img/lampu.webp"
-        class="size-10 -rotate-17 absolute right-0 sm:top-17 top-22 scale-x-[-1]"
+        src="assets/img/cewe.webp"
+        class="mt-12 mx-auto w-300 xs:w-300 max-w-100 h-auto"
         alt=""
-        srcset=""
       />
     </div>
 
-    <!-- Container TTS -->
-    <div class="relative w-full max-w-screen-md mx-auto">
+    <div id="tts" class="hidden">
+      <!-- Judul -->
       <div
-        class="z-10 sm:flex absolute bg-white h-115 -top-10 left-0 right-0 m-10 rounded-xl border-2"
+        class="w-full relative max-w-screen-sm mx-auto mt-10 items-center justify-center text-center"
       >
-        <div class="p-2">
-          <div
-            class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
-          >
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">B</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">C</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="n13">N</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">K</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="p15">P</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">Q</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">L</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="p18">P</div>
-          </div>
-          <div
-            class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
-          >
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">S</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">O</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="g23">G</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">E</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="i25">I</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">X</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">B</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="i28">I</div>
-          </div>
-          <div
-            class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
-          >
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">W</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="s32">S</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="a33">A</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">D</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="l35">L</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">J</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">Y</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="n38">N</div>
-          </div>
-          <div
-            class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
-          >
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="g41">G</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="a42">A</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="n43">N</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="t44">T</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="e45">E</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="n46">N</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="g47">G</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="t48">T</div>
-          </div>
-          <div
-            class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
-          >
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">I</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="b52">B</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="t53">T</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">R</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="k55">K</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">F</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">C</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="a58">A</div>
-          </div>
-          <div
-            class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
-          >
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">V</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="a62">A</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="u63">U</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="l64">L</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="a65">A</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="p66">P</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="a67">A</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="a68">R</div>
-          </div>
-          <div
-            class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
-          >
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">M</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="r72">R</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="k73">K</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">U</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer" data-huruf="n75">N</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">S</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">A</div>
-            <div class="border py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer">H</div>
-          </div>
-        </div>
-        <div class="flex sm:block w-full px-5 pt-2 sm:pt-6 justify-center items-center">
-          <div class="w-full space-y-2">
-            <div class="flex space-x-2">
-              <div
-                class="border w-full rounded-md text-center py-1 font-margarine text-xs"
-              >
-                Ngantuk
-              </div>
-              <div
-                class="border w-full rounded-md text-center py-1 font-margarine text-xs"
-              >
-                Pilekan
-              </div>
-            </div>
-            <div class="flex space-x-2">
-              <div
-                class="border w-full rounded-md text-center py-1 font-margarine text-xs"
-              >
-                Pintar
-              </div>
-              <div
-                class="border w-full rounded-md text-center py-1 font-margarine text-xs"
-              >
-                Sabar
-              </div>
-            </div>
-            <div class="flex space-x-2">
-              <div
-                class="border w-full rounded-md text-center py-1 font-margarine text-xs"
-              >
-                Lapar
-              </div>
-              <div
-                class="border w-full rounded-md text-center py-1 font-margarine text-xs"
-              >
-                Ganteng
-              </div>
-            </div>
-          </div>
-          <div class="w-40 sm:h-fit sm:w-fit overflow-hidden sm:overflow-visible">
-            <img
-              src="assets/img/cewe.webp"
-              class="scale-180 translate-y-6 translate-x-1 sm:translate-y-0 sm:translate-x-20 sm:scale-100"
-              alt=""
-              srcset=""
-            />
-          </div>
-        </div>
+        <h1 class="font-rampart text-5xl">Aku Banget</h1>
+        <h1 class="font-margarine text-xl mt-4">
+          Cari sifat yang Bang Salsa banget
+        </h1>
+        <img
+          src="assets/img/kacapm.webp"
+          class="size-20 absolute sm:-left-4 sm:top-6 -left-6 top-21 scale-x-[-1]"
+          alt=""
+          srcset=""
+        />
+        <img
+          src="assets/img/lampu.webp"
+          class="size-10 -rotate-17 absolute right-0 sm:top-17 top-22 scale-x-[-1]"
+          alt=""
+          srcset=""
+        />
       </div>
-      <div
-        class="z-0 relative bg-black h-115 top-3 left-2 m-10 rounded-xl border"
-      ></div>
+
+      <!-- Container TTS -->
+      <div class="relative w-full max-w-screen-md mx-auto">
+        <div
+          class="z-10 sm:flex absolute bg-white h-115 -top-10 left-0 right-0 m-10 rounded-xl border-2"
+        >
+          <div class="p-2">
+            <div
+              class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
+            >
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                B
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                C
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="n13"
+              >
+                N
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                K
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="p15"
+              >
+                P
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                Q
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                L
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="p18"
+              >
+                P
+              </div>
+            </div>
+            <div
+              class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
+            >
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                S
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                O
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="g23"
+              >
+                G
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                E
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="i25"
+              >
+                I
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                X
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                B
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="i28"
+              >
+                I
+              </div>
+            </div>
+            <div
+              class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
+            >
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                W
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="s32"
+              >
+                S
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="a33"
+              >
+                A
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                D
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="l35"
+              >
+                L
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                J
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                Y
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="n38"
+              >
+                N
+              </div>
+            </div>
+            <div
+              class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
+            >
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="g41"
+              >
+                G
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="a42"
+              >
+                A
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="n43"
+              >
+                N
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="t44"
+              >
+                T
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="e45"
+              >
+                E
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="n46"
+              >
+                N
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="g47"
+              >
+                G
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="t48"
+              >
+                T
+              </div>
+            </div>
+            <div
+              class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
+            >
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                J
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="b52"
+              >
+                B
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="t53"
+              >
+                T
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                R
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="k55"
+              >
+                K
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                F
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                C
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="a58"
+              >
+                A
+              </div>
+            </div>
+            <div
+              class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
+            >
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                V
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="a62"
+              >
+                A
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="u63"
+              >
+                U
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="l64"
+              >
+                L
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="a65"
+              >
+                A
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="p66"
+              >
+                P
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="a67"
+              >
+                A
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="a68"
+              >
+                R
+              </div>
+            </div>
+            <div
+              class="flex space-x-2 pt-4 justify-center sm:justify-start sm:ml-4 items-center"
+            >
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                M
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="r72"
+              >
+                R
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="k73"
+              >
+                K
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                U
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="n75"
+              >
+                N
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                S
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                A
+              </div>
+              <div
+                class="huruf border w-8 py-0.5 px-2.5 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+              >
+                H
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex sm:block w-full px-5 pt-2 sm:pt-6 justify-center items-center"
+          >
+            <div class="w-full space-y-2">
+              <div class="flex space-x-2">
+                <div
+                  class="border w-full rounded-md text-center py-1 font-margarine text-xs"
+                >
+                  Ngantuk
+                </div>
+                <div
+                  class="border w-full rounded-md text-center py-1 font-margarine text-xs"
+                >
+                  Pilekan
+                </div>
+              </div>
+              <div class="flex space-x-2">
+                <div
+                  class="border w-full rounded-md text-center py-1 font-margarine text-xs"
+                >
+                  Pintar
+                </div>
+                <div
+                  class="border w-full rounded-md text-center py-1 font-margarine text-xs"
+                >
+                  Sabar
+                </div>
+              </div>
+              <div class="flex space-x-2">
+                <div
+                  class="border w-full rounded-md text-center py-1 font-margarine text-xs"
+                >
+                  Lapar
+                </div>
+                <div
+                  class="border w-full rounded-md text-center py-1 font-margarine text-xs"
+                >
+                  Ganteng
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-40 sm:h-fit sm:w-fit overflow-hidden sm:overflow-visible"
+            >
+              <img
+                src="assets/img/cewe.webp"
+                class="scale-180 translate-y-10 translate-x-1 sm:translate-y-0 sm:translate-x-20 sm:scale-100"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="z-0 relative bg-black h-115 top-3 left-2 m-10 rounded-xl border"
+        ></div>
+      </div>
     </div>
 
     <script src="script.js"></script>

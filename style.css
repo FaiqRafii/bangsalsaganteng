@@ -11,9 +11,23 @@
 @import "tailwindcss";
 
 .font-rampart {
-    font-family: 'RampartOne', sans-serif;
-  }
+  font-family: "RampartOne", sans-serif;
+}
 
 .font-margarine {
-    font-family: 'Margarine', sans-serif;
+  font-family: "Margarine", sans-serif;
+}
+
+@keyframes naikTurun {
+  0%,
+  100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.naik-turun{
+    animation: naikTurun 2s ease-in-out infinite;
+}
