@@ -139,37 +139,51 @@ function cekSama(kata) {
   let hurufSama = [];
 
   if (kata === "ngantuk") {
+    document.querySelector('.jawaban.kosong').innerHTML='Ngantuk';
+    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
+    document.querySelector('.jawaban.kosong').classList.remove('kosong');
     hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "pilekan") {
+    document.querySelector('.jawaban.kosong').innerHTML='Pilekan';
+    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
+    document.querySelector('.jawaban.kosong').classList.remove('kosong');
     hurufSama.push(hurufSelected.filter((item) => ngantuk.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "pintar") {
-    hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
+    document.querySelector('.jawaban.kosong').innerHTML='Pintar';
+    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
+    document.querySelector('.jawaban.kosong').classList.remove('kosong');hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ngantuk.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "sabar") {
-    hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
+    document.querySelector('.jawaban.kosong').innerHTML='Sabar';
+    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
+    document.querySelector('.jawaban.kosong').classList.remove('kosong');hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ngantuk.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "lapar") {
-    hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
+    document.querySelector('.jawaban.kosong').innerHTML='Lapar';
+    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
+    document.querySelector('.jawaban.kosong').classList.remove('kosong');hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ngantuk.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "ganteng") {
-    hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
+    document.querySelector('.jawaban.kosong').innerHTML='Ganteng';
+    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
+    document.querySelector('.jawaban.kosong').classList.remove('kosong');hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
