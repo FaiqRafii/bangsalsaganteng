@@ -233,3 +233,22 @@ unmuteBtn.forEach((btn) => {
     bgm.pause();
   });
 });
+
+//Confetti
+document.body.addEventListener('click',(e)=>{
+  e.preventDefault();
+  party.confetti(e);
+})
+
+setInterval(()=>{
+  party.confetti(document.body, {
+    count: party.variation.range(100, 200),
+    spread: 120,
+    speed: party.variation.range(400, 800),
+    size: party.variation.range(1, 2),
+    shapes: ["square", "circle", "star"],
+  });
+  
+  
+  
+}, 2500)

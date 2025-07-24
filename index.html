@@ -6,6 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="assets/img/icon.webp" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <audio
       loop
       id="bgm"
@@ -29,7 +30,7 @@
     <!-- Landing -->
     <div
       id="landing"
-      class="z-50 overflow-hidden pt-10 w-full h-full justify-center items-center"
+      class="overflow-hidden hidden pt-10 w-full h-full justify-center items-center"
     >
       <div
         class="w-full max-w-screen-sm mx-auto text-center items-center justify-center"
@@ -104,6 +105,45 @@
       />
     </div>
 
+    <!-- Greeting -->
+    <div
+      id="greeting"
+      class="relative overflow-hidden w-full h-full max-w-screen-sm mx-auto my-auto justify-center items-center"
+    >
+      <div
+        class="z-10 pt-20 sm:pt-45 md:55 lg:pt-15 w-full max-w-screen-sm mx-auto text-center items-center justify-center"
+      >
+        <div class="naik-turun text-5xl sm:text-6xl lg:text-7xl font-rampart">Happy Birthday</div>
+        <div class="mt-5 text-xs sm:text-md lg:text-lg font-margarine">
+          Semoga Bang Salsa yang pintar, sabar, sering lapar, <br />
+          suka makan, always ngantukan dan pilekan ini <br />
+          panjang umur sehat terus dipermudah <br />
+          urusannya dunia akhirat<br />Amiiin
+        </div>
+      </div>
+      <div
+        id="balonKiri"
+        class="absolute z-0 w-30 h-fit left-2 sm:left-20 bottom-0 naik-turun"
+      >
+        <img src="assets/img/balon-kiri.webp" alt="" srcset="" />
+      </div>
+      <div
+        id="balonKanan"
+        class="absolute z-0 w-30 h-fit right-2 sm:right-20 bottom-0 naik-turun"
+      >
+        <img src="assets/img/balon-kanan.webp" alt="" srcset="" />
+      </div>
+      <div
+        class="w-full z-10 absolute -bottom-5 flex justify-center items-center"
+      >
+        <div class="mx-auto relative">
+          <div class="flame absolute left-36 top-8"></div>
+          <div class="flame absolute left-58 top-1"></div>
+          <img src="assets/img/cake25.webp" class="w-100 h-fit" alt="" />
+        </div>
+      </div>
+    </div>
+
     <div id="tts" class="hidden">
       <!-- Judul -->
       <div
@@ -139,7 +179,7 @@
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
                 data-huruf="b11"
-                >
+              >
                 B
               </div>
               <div
@@ -505,38 +545,26 @@
               <div class="flex space-x-2">
                 <div
                   class="jawaban kosong border h-6 w-full rounded-md flex justify-center items-center py-1 font-margarine text-xs"
-                >
-                  
-                </div>
+                ></div>
                 <div
                   class="jawaban kosong border h-6 w-full rounded-md flex justify-center items-center py-1 font-margarine text-xs"
-                >
-                  
-                </div>
+                ></div>
               </div>
               <div class="flex space-x-2">
                 <div
                   class="jawaban kosong border h-6 w-full rounded-md flex justify-center items-center py-1 font-margarine text-xs"
-                >
-                  
-                </div>
+                ></div>
                 <div
                   class="jawaban kosong border h-6 w-full rounded-md flex justify-center items-center py-1 font-margarine text-xs"
-                >
-                  
-                </div>
+                ></div>
               </div>
               <div class="flex space-x-2">
                 <div
                   class="jawaban kosong border h-6 w-full rounded-md flex justify-center items-center py-1 font-margarine text-xs"
-                >
-                  
-                </div>
+                ></div>
                 <div
                   class="jawaban kosong border h-6 w-full rounded-md flex justify-center items-center py-1 font-margarine text-xs"
-                >
-                  
-                </div>
+                ></div>
               </div>
             </div>
             <div
@@ -607,6 +635,15 @@
         </svg>
       </div>
     </div>
+
+    <!--Greeting Card-->
+    <!-- <div class="w-screen h-screen bg-black/30 z-50 fixed top-0 left-0 p-10">
+      <div class="bg-white rounded-md">
+        <div class="">
+
+        </div>
+      </div>
+    </div> -->
 
     <script src="script.js"></script>
   </body>
