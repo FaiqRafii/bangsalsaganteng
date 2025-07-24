@@ -11,6 +11,10 @@
       id="bgm"
       src="assets/music/Do The Bop - Everet Almond.mp3"
     ></audio>
+    <audio id="sparkle" src="assets/music/fairy-dust-sound-effect.mp3"></audio>
+    <audio id="correctAll" src="assets/music/correct_VsVqwRb.mp3"></audio>
+    <audio id="correct" src="assets/music/correct.mp3"></audio>
+    <audio id="click" src="assets/music/coin.mp3"></audio>
   </head>
 
   <body
@@ -35,11 +39,57 @@
           Karena hari ini adalah your special day... <br />Aku mau ngajak bang
           Salsa mainn
         </div>
-        <div
-          id="mainBtn"
-          class="border mx-auto mt-5 w-30 h-10 border-black bg-white text-black rounded-md flex items-center justify-center hover:bg-black hover:text-white"
-        >
-          <div class="font-margarine">Ayo Mainn</div>
+        <div class="flex mt-5 space-x-2 justify-center items-center">
+          <svg
+            viewBox="0 0 24 24"
+            class="muteBtn w-7 h-fit"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M12.5 6.8935V5.57661C12.5 5.36926 12.5 5.26559 12.5347 5.17738C12.5653 5.09948 12.615 5.03052 12.6792 4.97682C12.752 4.91601 12.8503 4.88323 13.047 4.81766L17.447 3.35099C17.8025 3.23249 17.9803 3.17324 18.1218 3.20877C18.2456 3.23987 18.3529 3.31718 18.4216 3.42484C18.5 3.54783 18.5 3.7352 18.5 4.10994V7.42339C18.5 7.63074 18.5 7.73441 18.4653 7.82262C18.4347 7.90052 18.385 7.96948 18.3208 8.02318C18.248 8.08399 18.1497 8.11677 17.953 8.18234L14.8192 9.22692M12.5 12.5V18.5M12.5 18.5C12.5 19.8807 10.933 21 9 21C7.067 21 5.5 19.8807 5.5 18.5C5.5 17.1193 7.067 16 9 16C10.933 16 12.5 17.1193 12.5 18.5ZM3 3L21 21"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+          <svg
+            viewBox="0 0 24 24"
+            class="unmuteBtn hidden w-7 h-fit"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M12.5 8.89001V18.5M12.5 8.89001V5.57656C12.5 5.36922 12.5 5.26554 12.5347 5.17733C12.5653 5.09943 12.615 5.03047 12.6792 4.97678C12.752 4.91597 12.8503 4.88318 13.047 4.81761L17.447 3.35095C17.8025 3.23245 17.9803 3.17319 18.1218 3.20872C18.2456 3.23982 18.3529 3.31713 18.4216 3.42479C18.5 3.54779 18.5 3.73516 18.5 4.10989V7.42335C18.5 7.63069 18.5 7.73436 18.4653 7.82258C18.4347 7.90048 18.385 7.96943 18.3208 8.02313C18.248 8.08394 18.1497 8.11672 17.953 8.18229L13.553 9.64896C13.1975 9.76746 13.0197 9.82671 12.8782 9.79119C12.7544 9.76009 12.6471 9.68278 12.5784 9.57512C12.5 9.45212 12.5 9.26475 12.5 8.89001ZM12.5 18.5C12.5 19.8807 10.933 21 9 21C7.067 21 5.5 19.8807 5.5 18.5C5.5 17.1192 7.067 16 9 16C10.933 16 12.5 17.1192 12.5 18.5Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+          <div
+            id="mainBtn"
+            class="border w-30 h-10 border-black bg-white text-black rounded-md flex items-center justify-center hover:bg-black hover:text-white"
+          >
+            <div class="font-margarine">Ayo Mainn</div>
+          </div>
         </div>
       </div>
       <img
@@ -57,7 +107,7 @@
     <div id="tts" class="hidden">
       <!-- Judul -->
       <div
-        class="w-full relative max-w-screen-sm mx-auto mt-10 items-center justify-center text-center"
+        class="w-full relative max-w-screen-sm mx-auto mt-5 items-center justify-center text-center"
       >
         <h1 class="font-rampart text-5xl">Aku Banget</h1>
         <h1 class="font-margarine text-xl mt-4">
@@ -88,11 +138,13 @@
             >
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
-              >
+                data-huruf="b11"
+                >
                 B
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="c12"
               >
                 C
               </div>
@@ -104,6 +156,7 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="k14"
               >
                 K
               </div>
@@ -115,11 +168,13 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="q16"
               >
                 Q
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="l17"
               >
                 L
               </div>
@@ -135,11 +190,13 @@
             >
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="s21"
               >
                 S
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="022"
               >
                 O
               </div>
@@ -151,6 +208,7 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="e24"
               >
                 E
               </div>
@@ -162,11 +220,13 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="x26"
               >
                 X
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="b27"
               >
                 B
               </div>
@@ -182,6 +242,7 @@
             >
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="s31"
               >
                 W
               </div>
@@ -199,6 +260,7 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="b34"
               >
                 D
               </div>
@@ -210,11 +272,13 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="j36"
               >
                 J
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="y37"
               >
                 Y
               </div>
@@ -282,6 +346,7 @@
             >
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="j51"
               >
                 J
               </div>
@@ -299,6 +364,7 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="r54"
               >
                 R
               </div>
@@ -310,11 +376,13 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="f56"
               >
                 F
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="c57"
               >
                 C
               </div>
@@ -330,6 +398,7 @@
             >
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="v62"
               >
                 V
               </div>
@@ -371,7 +440,7 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
-                data-huruf="a68"
+                data-huruf="r68"
               >
                 R
               </div>
@@ -381,6 +450,7 @@
             >
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="m71"
               >
                 M
               </div>
@@ -398,6 +468,7 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="u74"
               >
                 U
               </div>
@@ -409,16 +480,19 @@
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="s76"
               >
                 S
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="a77"
               >
                 A
               </div>
               <div
                 class="huruf border w-7 py-0.5 px-2 rounded-md font-margarine hover:bg-black hover:text-white hover:cursor-pointer bg-white"
+                data-huruf="h78"
               >
                 H
               </div>
@@ -483,8 +557,54 @@
           </div>
         </div>
         <div
-          class="z-0 relative bg-black h-115 top-3 left-2 m-10 rounded-xl border"
+          class="z-0 relative bg-black h-115 top-3 left-2 mx-10 mt-10 rounded-xl border"
         ></div>
+      </div>
+      <div class="flex mt-3 ml-3">
+        <svg
+          viewBox="0 0 24 24"
+          class="muteBtn w-7 h-fit"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M12.5 6.8935V5.57661C12.5 5.36926 12.5 5.26559 12.5347 5.17738C12.5653 5.09948 12.615 5.03052 12.6792 4.97682C12.752 4.91601 12.8503 4.88323 13.047 4.81766L17.447 3.35099C17.8025 3.23249 17.9803 3.17324 18.1218 3.20877C18.2456 3.23987 18.3529 3.31718 18.4216 3.42484C18.5 3.54783 18.5 3.7352 18.5 4.10994V7.42339C18.5 7.63074 18.5 7.73441 18.4653 7.82262C18.4347 7.90052 18.385 7.96948 18.3208 8.02318C18.248 8.08399 18.1497 8.11677 17.953 8.18234L14.8192 9.22692M12.5 12.5V18.5M12.5 18.5C12.5 19.8807 10.933 21 9 21C7.067 21 5.5 19.8807 5.5 18.5C5.5 17.1193 7.067 16 9 16C10.933 16 12.5 17.1193 12.5 18.5ZM3 3L21 21"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <svg
+          viewBox="0 0 24 24"
+          class="unmuteBtn hidden w-7 h-fit"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M12.5 8.89001V18.5M12.5 8.89001V5.57656C12.5 5.36922 12.5 5.26554 12.5347 5.17733C12.5653 5.09943 12.615 5.03047 12.6792 4.97678C12.752 4.91597 12.8503 4.88318 13.047 4.81761L17.447 3.35095C17.8025 3.23245 17.9803 3.17319 18.1218 3.20872C18.2456 3.23982 18.3529 3.31713 18.4216 3.42479C18.5 3.54779 18.5 3.73516 18.5 4.10989V7.42335C18.5 7.63069 18.5 7.73436 18.4653 7.82258C18.4347 7.90048 18.385 7.96943 18.3208 8.02313C18.248 8.08394 18.1497 8.11672 17.953 8.18229L13.553 9.64896C13.1975 9.76746 13.0197 9.82671 12.8782 9.79119C12.7544 9.76009 12.6471 9.68278 12.5784 9.57512C12.5 9.45212 12.5 9.26475 12.5 8.89001ZM12.5 18.5C12.5 19.8807 10.933 21 9 21C7.067 21 5.5 19.8807 5.5 18.5C5.5 17.1192 7.067 16 9 16C10.933 16 12.5 17.1192 12.5 18.5Z"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
       </div>
     </div>
 
