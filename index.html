@@ -16,6 +16,11 @@
     <audio id="correctAll" src="assets/music/correct_VsVqwRb.mp3"></audio>
     <audio id="correct" src="assets/music/correct.mp3"></audio>
     <audio id="click" src="assets/music/coin.mp3"></audio>
+    <audio
+      loop
+      id="bgmUltah"
+      src="assets/music/The Cats Meow - Everet Almond.mp3"
+    ></audio>
   </head>
 
   <body
@@ -30,7 +35,7 @@
     <!-- Landing -->
     <div
       id="landing"
-      class="overflow-hidden hidden pt-10 w-full h-full justify-center items-center"
+      class="overflow-hidden pt-10 w-full h-full justify-center items-center"
     >
       <div
         class="w-full max-w-screen-sm mx-auto text-center items-center justify-center"
@@ -105,15 +110,23 @@
       />
     </div>
 
+    <!--Kado-->
+    <div class="w-full hidden h-full max-w-screen-sm mx-auto bg-red-500">
+      <div class="w-50 h-70 bg-blue-500">.</div>
+    </div>
+
     <!-- Greeting -->
     <div
       id="greeting"
-      class="relative overflow-hidden w-full h-full max-w-screen-sm mx-auto my-auto justify-center items-center"
+      class="relative hidden overflow-hidden w-full h-full max-w-screen-sm mx-auto my-auto justify-center items-center"
     >
       <div
         class="z-10 pt-20 sm:pt-45 md:55 lg:pt-15 w-full max-w-screen-sm mx-auto text-center items-center justify-center"
       >
-        <div class="naik-turun text-5xl sm:text-6xl lg:text-7xl font-rampart">Happy Birthday</div>
+        <!-- <img src="assets/img/topi.webp" class="absolute top-7 left-10 -rotate-5 naik-turun w-12 h-fit" alt="" srcset=""> -->
+        <div class="naik-turun text-5xl sm:text-6xl lg:text-7xl font-rampart">
+          Happy Birthday
+        </div>
         <div class="mt-5 text-xs sm:text-md lg:text-lg font-margarine">
           Semoga Bang Salsa yang pintar, sabar, sering lapar, <br />
           suka makan, always ngantukan dan pilekan ini <br />
@@ -644,6 +657,8 @@
         </div>
       </div>
     </div> -->
+
+    
 
     <script src="script.js"></script>
   </body>

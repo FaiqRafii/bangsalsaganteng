@@ -9,8 +9,10 @@ const muteBtn = document.querySelectorAll(".muteBtn");
 const unmuteBtn = document.querySelectorAll(".unmuteBtn");
 const sparkleSfx = document.getElementById("sparkle");
 const clickSfx = document.getElementById("click");
-const correctSfx=document.getElementById('correct');
-const correctAllSfx=document.getElementById('correctAll');
+const correctSfx = document.getElementById("correct");
+const correctAllSfx = document.getElementById("correctAll");
+const ultahBgm=document.getElementById('bgmUltah');
+const greeting = document.getElementById('greeting');
 
 const ngantuk = ["n13", "g23", "a33", "n43", "t53", "u63", "k73"];
 const pintar = ["p18", "i28", "n38", "t48", "a58", "r68"];
@@ -139,51 +141,67 @@ function cekSama(kata) {
   let hurufSama = [];
 
   if (kata === "ngantuk") {
-    document.querySelector('.jawaban.kosong').innerHTML='Ngantuk';
-    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
-    document.querySelector('.jawaban.kosong').classList.remove('kosong');
+    document.querySelector(".jawaban.kosong").innerHTML = "Ngantuk";
+    document
+      .querySelector(".jawaban.kosong")
+      .classList.add("bg-black", "text-white");
+    document.querySelector(".jawaban.kosong").classList.remove("kosong");
     hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "pilekan") {
-    document.querySelector('.jawaban.kosong').innerHTML='Pilekan';
-    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
-    document.querySelector('.jawaban.kosong').classList.remove('kosong');
+    document.querySelector(".jawaban.kosong").innerHTML = "Pilekan";
+    document
+      .querySelector(".jawaban.kosong")
+      .classList.add("bg-black", "text-white");
+    document.querySelector(".jawaban.kosong").classList.remove("kosong");
     hurufSama.push(hurufSelected.filter((item) => ngantuk.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "pintar") {
-    document.querySelector('.jawaban.kosong').innerHTML='Pintar';
-    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
-    document.querySelector('.jawaban.kosong').classList.remove('kosong');hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
+    document.querySelector(".jawaban.kosong").innerHTML = "Pintar";
+    document
+      .querySelector(".jawaban.kosong")
+      .classList.add("bg-black", "text-white");
+    document.querySelector(".jawaban.kosong").classList.remove("kosong");
+    hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ngantuk.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "sabar") {
-    document.querySelector('.jawaban.kosong').innerHTML='Sabar';
-    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
-    document.querySelector('.jawaban.kosong').classList.remove('kosong');hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
+    document.querySelector(".jawaban.kosong").innerHTML = "Sabar";
+    document
+      .querySelector(".jawaban.kosong")
+      .classList.add("bg-black", "text-white");
+    document.querySelector(".jawaban.kosong").classList.remove("kosong");
+    hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ngantuk.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "lapar") {
-    document.querySelector('.jawaban.kosong').innerHTML='Lapar';
-    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
-    document.querySelector('.jawaban.kosong').classList.remove('kosong');hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
+    document.querySelector(".jawaban.kosong").innerHTML = "Lapar";
+    document
+      .querySelector(".jawaban.kosong")
+      .classList.add("bg-black", "text-white");
+    document.querySelector(".jawaban.kosong").classList.remove("kosong");
+    hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ngantuk.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => ganteng.includes(item)));
   } else if (kata === "ganteng") {
-    document.querySelector('.jawaban.kosong').innerHTML='Ganteng';
-    document.querySelector('.jawaban.kosong').classList.add("bg-black","text-white");
-    document.querySelector('.jawaban.kosong').classList.remove('kosong');hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
+    document.querySelector(".jawaban.kosong").innerHTML = "Ganteng";
+    document
+      .querySelector(".jawaban.kosong")
+      .classList.add("bg-black", "text-white");
+    document.querySelector(".jawaban.kosong").classList.remove("kosong");
+    hurufSama.push(hurufSelected.filter((item) => pilekan.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => pintar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => sabar.includes(item)));
     hurufSama.push(hurufSelected.filter((item) => lapar.includes(item)));
@@ -198,8 +216,19 @@ function cekSama(kata) {
   }
   console.log("huruf selected: " + hurufSelected);
 
-  if(correctCounter==5){
+  if (correctCounter == 5) {
     correctAllSfx.play();
+    tts.classList.add('hidden');
+    fetch('kado.html')
+    .then(response=>response.text())
+    .then(html=>{
+      document.body.innerHTML=html;
+    })
+    .catch(err=>{
+      console.error('Gagal memuat file',err);
+    });
+    bgm.pause();
+    ultahBgm.play();
   }
 }
 
@@ -210,8 +239,17 @@ mainBtn.addEventListener("click", () => {
   mainBtn.classList.toggle("text-white");
   mainBtn.classList.toggle("bg-white");
   mainBtn.classList.toggle("text-black");
-  landing.classList.add("hidden");
-  tts.classList.remove("hidden");
+  // landing.classList.add("hidden");
+  // tts.classList.remove("hidden");
+  // fetch('kado/')
+  //   .then(response=>response.text())
+  //   .then(html=>{
+  //     document.body.innerHTML=html;
+  //   })
+  //   .catch(err=>{
+  //     console.error('Gagal memuat file',err);
+  //   });
+  window.location.href='kado/';
 });
 
 muteBtn.forEach((btn) => {
@@ -235,20 +273,20 @@ unmuteBtn.forEach((btn) => {
 });
 
 //Confetti
-document.body.addEventListener('click',(e)=>{
-  e.preventDefault();
-  party.confetti(e);
-})
-
-setInterval(()=>{
-  party.confetti(document.body, {
-    count: party.variation.range(100, 200),
-    spread: 120,
-    speed: party.variation.range(400, 800),
-    size: party.variation.range(1, 2),
-    shapes: ["square", "circle", "star"],
+function confetti() {
+  document.body.addEventListener("click", (e) => {
+    e.preventDefault();
+    party.confetti(e);
   });
-  
-  
-  
-}, 2500)
+
+  setInterval(() => {
+    party.confetti(document.body, {
+      count: party.variation.range(100, 200),
+      spread: 120,
+      speed: party.variation.range(400, 800),
+      size: party.variation.range(1, 2),
+      shapes: ["square", "circle", "star"],
+    });
+  }, 2500);
+}
+
