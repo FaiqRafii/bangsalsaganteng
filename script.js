@@ -11,8 +11,8 @@ const sparkleSfx = document.getElementById("sparkle");
 const clickSfx = document.getElementById("click");
 const correctSfx = document.getElementById("correct");
 const correctAllSfx = document.getElementById("correctAll");
-const ultahBgm=document.getElementById('bgmUltah');
-const greeting = document.getElementById('greeting');
+const ultahBgm = document.getElementById("bgmUltah");
+const greeting = document.getElementById("greeting");
 
 const ngantuk = ["n13", "g23", "a33", "n43", "t53", "u63", "k73"];
 const pintar = ["p18", "i28", "n38", "t48", "a58", "r68"];
@@ -218,17 +218,20 @@ function cekSama(kata) {
 
   if (correctCounter == 5) {
     correctAllSfx.play();
-    tts.classList.add('hidden');
-    fetch('kado.html')
-    .then(response=>response.text())
-    .then(html=>{
-      document.body.innerHTML=html;
-    })
-    .catch(err=>{
-      console.error('Gagal memuat file',err);
-    });
     bgm.pause();
-    ultahBgm.play();
+    setInterval(() => {
+      party.confetti(document.body, {
+        count: party.variation.range(100, 200),
+        spread: 120,
+        speed: party.variation.range(400, 800),
+        size: party.variation.range(1, 2),
+        shapes: ["square", "circle", "star"],
+      });
+    }, 500);
+    setTimeout(() => {
+      tts.classList.add("hidden");
+      window.location.href = "kado/";
+    }, 4000);
   }
 }
 
@@ -239,8 +242,8 @@ mainBtn.addEventListener("click", () => {
   mainBtn.classList.toggle("text-white");
   mainBtn.classList.toggle("bg-white");
   mainBtn.classList.toggle("text-black");
-  // landing.classList.add("hidden");
-  // tts.classList.remove("hidden");
+  landing.classList.add("hidden");
+  tts.classList.remove("hidden");
   // fetch('kado/')
   //   .then(response=>response.text())
   //   .then(html=>{
@@ -249,7 +252,7 @@ mainBtn.addEventListener("click", () => {
   //   .catch(err=>{
   //     console.error('Gagal memuat file',err);
   //   });
-  window.location.href='kado/';
+  // window.location.href='kado/';
 });
 
 muteBtn.forEach((btn) => {
@@ -289,4 +292,3 @@ function confetti() {
     });
   }, 2500);
 }
-
