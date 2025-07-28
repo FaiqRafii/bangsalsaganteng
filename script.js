@@ -227,7 +227,7 @@ function cekSama(kata) {
         size: party.variation.range(1, 2),
         shapes: ["square", "circle", "star"],
       });
-    }, 500);
+    }, 1000);
     setTimeout(() => {
       tts.classList.add("hidden");
       window.location.href = "kado/";
